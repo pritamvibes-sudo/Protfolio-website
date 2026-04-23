@@ -1,0 +1,286 @@
+:root {
+    --bg-color: #080b10;
+    --card-bg: #111820;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --accent: #ffffff;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+.navbar {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+/* Hero Section */
+.hero {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-pic img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.bio {
+    max-width: 600px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Projects Grid */
+.projects {
+    padding: 6rem 2rem;
+}
+
+.projects h2, .services h2 {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    margin-bottom: 2rem;
+}
+
+.image-box {
+    border-radius: 12px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: transform 0.4s ease;
+}
+
+.image-box:hover {
+    transform: translateY(-5px);
+}
+
+.light-bg { background: #e8f1f8; }
+.dark-bg { background: #1a1f26; }
+
+.image-box img {
+    max-width: 80%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.project-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 2rem;
+    margin-bottom: 3rem;
+}
+
+.service-item h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.service-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.center-btn {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* CTA Section */
+.cta-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 4rem;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6rem 0;
+}
+
+.btn-primary {
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.copyright {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .project-grid, .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 3rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+.about-container {
+    max-width: 700px;
+    margin: 4rem auto;
+}
+
+.profile-img {
+    width: 120px;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+h1 { font-size: 2rem; margin-bottom: 3rem; }
+
+h2 { 
+    font-size: 0.75rem; 
+    letter-spacing: 2px; 
+    color: #64748b; 
+    margin: 3rem 0 1rem; 
+}
+
+/* Experience List */
+.exp-item {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 1rem;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.2rem;
+}
+
+.meta { color: #64748b; font-size: 0.9rem; }
+
+/* Stack Grid */
+.stack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.stack-item {
+    padding: 1rem;
+    background: #111820;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+/* Specific button layout for this page */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
